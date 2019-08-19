@@ -1,0 +1,32 @@
+<h1>Tasks#edit</h1>
+<p>Find me in app/views/tasks/edit.html.erb</p>
+
+<%= link_to 'ホームへ',root_path,class: 'btn btn-primary' %>
+
+
+<div class="container">
+
+
+<%= form_for @task do |f| %>
+
+  <form>
+    <div class="form-group">
+    <label>お名前</label>
+    <%= f.text_field :name,  class: 'form-control',placeholder: 'お名前' %>
+    </div>
+
+    <div class="form-group">
+    <label>コメント</label>
+    <%= f.text_field :description , class: 'form-control',placeholder: "コメント" %>
+    </div>
+    
+    <div class="form-group">
+    <label>投稿</label>
+    <%= f.file_field :post  %>
+   </div>
+
+<%= f.submit  :class=>"btn btn-info" ,value: "送信ボタン"  %>
+ </form>
+<% end %>
+
+</div>
